@@ -37,6 +37,16 @@ Features
 Installation
 ============
 
+0-1) previous cuda remove
+     $ sudo apt-get purge nvidia*
+     $ sudo apt-get autoremove
+     $ sudo apt-get autoclean
+     $ sudo rm -rf /usr/local/cuda*
+0-2) cuda 11.7 installed
+     $ download and install
+0-3) cuQuantum installed
+     $ tarball extracted, path.. hmm must be --cuquantum
+
 PennyLane-Lightning-GPU requires Python version 3.7 and above. It can be installed using ``pip``:
 
 .. code-block:: console
@@ -59,9 +69,10 @@ To build a wheel from the package sources using the direct SDK path:
 To build using the PyPI/Conda installed cuQuantum package:
 
 .. code-block:: console
-
+    (!! Execution)
     python -m pip install wheel cuquantum
     python setup.py build_ext  --cuquantum=<path to sdk> !! must be
+    ex) python3.7 setup.py bdist_wheel --cuquantum=/usr/local/cuquantum-linux-x86_64-22.05.0.41-archive
     python setup.py bdist_wheel
 
 The built wheel can now be installed as:
@@ -69,6 +80,7 @@ The built wheel can now be installed as:
 .. code-block:: console
 
     python -m pip install ./dist/PennyLane_Lightning_GPU-*.whl
+    ex) python3.7 -m pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org PennyLane_Lightning_GPU-0.25.0.dev0-cp37-cp37m-linux_x86_64.whl
 
 To simplify the build, we recommend using the following containerized build process, which creates `manylinux2014 <https://github.com/pypa/manylinux>`_ compatible wheels.
 
