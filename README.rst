@@ -69,7 +69,7 @@ To build a wheel from the package sources using the direct SDK path:
 To build using the PyPI/Conda installed cuQuantum package:
 
 .. code-block:: console
-    (!! Execution)
+
     python -m pip install wheel cuquantum
     python setup.py build_ext  --cuquantum=<path to sdk> !! must be
     ex) python3.7 setup.py bdist_wheel --cuquantum=/usr/local/cuquantum-linux-x86_64-22.05.0.41-archive
