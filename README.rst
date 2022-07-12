@@ -37,6 +37,8 @@ Features
 Installation
 ============
 
+0-0) gcc-11, update
+     cmake, gcc-11, update-linked
 0-1) previous cuda remove
      $ sudo apt-get purge nvidia*
      $ sudo apt-get autoremove
