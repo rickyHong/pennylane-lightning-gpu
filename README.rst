@@ -72,7 +72,7 @@ To build using the PyPI/Conda installed cuQuantum package:
 
     python -m pip install wheel cuquantum
     python setup.py build_ext  --cuquantum=<path to sdk> !! must be
-    ex) python3.7 setup.py bdist_wheel --cuquantum=/usr/local/cuquantum-linux-x86_64-22.05.0.41-archive
+    ex) python3.7 setup.py build_ext --cuquantum=/usr/local/cuquantum-linux-x86_64-22.05.0.41-archive
     python setup.py bdist_wheel
 
 The built wheel can now be installed as:
