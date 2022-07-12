@@ -38,7 +38,13 @@ Installation
 ============
 
 0-0) gcc-11, update
+     $ sudo -E add-apt-repository ppa:ubuntu-toolchain-r/test
+     $ sudo apt-get update
+     $ sudo apt-get install gcc-11 g++-11
+     $ sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-11 110 --slave /usr/bin/g++ g++ /usr/bin/g++-11
      cmake, gcc-11, update-linked
+     $ export CC=/usr/bin/x86_64-linux-gnu-gcc-11
+     $ export CXX=/usr/bin/x86_64-linux-gnu-g++-11
 0-1) previous cuda remove
      $ sudo apt-get purge nvidia*
      $ sudo apt-get autoremove
